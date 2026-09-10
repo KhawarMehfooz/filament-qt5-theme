@@ -4,6 +4,7 @@
     border-radius: var(--khwr-qt-radius);
     box-shadow: none;
     min-height: 0;
+    overflow: hidden;
 }
 
 .fi-input-wrp:not(.fi-disabled):not(:has(.fi-ac-action:focus)):focus-within {
@@ -18,6 +19,11 @@
 .fi-input-wrp .fi-input-wrp-prefix,
 .fi-input-wrp .fi-input-wrp-suffix {
     border-color: var(--border-subtle);
+}
+
+.fi-input-wrp .fi-input-wrp-prefix.fi-input-wrp-prefix-has-content,
+.fi-input-wrp .fi-input-wrp-suffix {
+    background-color: var(--khwr-qt-window-bg);
 }
 
 input.fi-input,
