@@ -1,0 +1,45 @@
+{
+    "name": "khwr/filament-qt5-theme",
+    "description": "A Qt5-inspired desktop theme for Filament panels.",
+    "keywords": [
+        "laravel",
+        "filament",
+        "filament-plugin",
+        "theme"
+    ],
+    "homepage": "https://github.com/KhawarMehfooz/filament-qt5-theme",
+    "support": {
+        "issues": "https://github.com/KhawarMehfooz/filament-qt5-theme/issues",
+        "source": "https://github.com/KhawarMehfooz/filament-qt5-theme"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khawar Mehfooz"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^4.0|^5.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "orchestra/testbench": "^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Khwr\\FilamentQt5Theme\\": "src/"
+        }
+    },
+    "scripts": {
+        "analyse": "phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

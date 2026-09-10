@@ -1,0 +1,10 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "node bin/build.js"
+    },
+    "devDependencies": {
+        "esbuild": "^0.24.0"
+    }
+}

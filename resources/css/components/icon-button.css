@@ -1,0 +1,21 @@
+/* padding grows the hit area around the icon; the matching negative margin cancels it back out of the layout. */
+
+.fi-icon-btn {
+    width: auto;
+    height: auto;
+    padding: var(--khwr-qt-sp2);
+    margin: calc(var(--khwr-qt-sp2) * -1);
+    border-radius: var(--khwr-qt-radius);
+}
+
+.fi-icon-btn:not(.fi-disabled):not([disabled]):hover {
+    background: var(--khwr-qt-btn-bg-hover);
+}
+
+.fi-icon-btn:not(.fi-color) {
+    color: var(--text-secondary);
+}
+
+.fi-icon-btn:not(.fi-color):not(.fi-disabled):not([disabled]):hover {
+    color: var(--text-primary);
+}

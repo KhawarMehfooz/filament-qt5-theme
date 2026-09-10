@@ -1,0 +1,24 @@
+.fi-toggle {
+    border-radius: var(--khwr-qt-radius);
+    background-color: var(--slate-300);
+}
+
+.fi-toggle.fi-color {
+    background: var(--color-primary) !important;
+}
+
+.fi-toggle.fi-color-danger {
+    background: var(--color-error) !important;
+}
+
+.fi-toggle.fi-color-success {
+    background: var(--color-success) !important;
+}
+
+.fi-toggle.fi-color-warning {
+    background: var(--color-warning) !important;
+}
+
+.fi-toggle > :first-child {
+    border-radius: var(--khwr-qt-radius);
+}

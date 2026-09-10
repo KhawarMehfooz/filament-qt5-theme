@@ -1,0 +1,27 @@
+.fi-badge {
+    padding-inline: var(--khwr-qt-sp2);
+    padding-block: 1px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    line-height: 1;
+    box-shadow: none;
+}
+
+.fi-badge:not(.fi-color) {
+    background-color: var(--khwr-qt-window-bg);
+    color: var(--text-secondary);
+    border-color: var(--border-subtle);
+}
+
+.fi-badge.fi-color {
+    border-color: color-mix(in srgb, currentColor 25%, transparent);
+}
+
+.fi-badge.fi-size-xs,
+.fi-badge.fi-size-sm {
+    padding-inline: var(--khwr-qt-sp2);
+    padding-block: 1px;
+}

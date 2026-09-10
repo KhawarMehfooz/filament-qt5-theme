@@ -1,0 +1,159 @@
+.fi-btn {
+    padding-inline: var(--khwr-qt-btn-px);
+    padding-block: var(--khwr-qt-sp2);
+    border-radius: var(--khwr-qt-radius);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    transition: background var(--transition-fast);
+}
+
+.fi-btn.fi-size-xs {
+    padding-inline: var(--khwr-qt-sp3);
+    padding-block: var(--khwr-qt-sp1);
+    font-size: var(--text-xs);
+}
+
+.fi-btn.fi-size-lg,
+.fi-btn.fi-size-xl {
+    padding-inline: var(--khwr-qt-sp6);
+    padding-block: var(--khwr-qt-sp3);
+}
+
+/* Default (secondary/gray) buttons */
+.fi-btn:not(.fi-outlined):not(.fi-color) {
+    background: var(--khwr-qt-btn-bg);
+    border: 1px solid var(--khwr-qt-btn-border);
+    color: var(--text-primary);
+    box-shadow: none;
+}
+
+.fi-btn:not(.fi-outlined):not(.fi-color):not(.fi-disabled):not([disabled]):hover {
+    background: var(--khwr-qt-btn-bg-hover);
+}
+
+.fi-btn:not(.fi-outlined):not(.fi-color):not(.fi-disabled):not([disabled]):active {
+    background: var(--khwr-qt-btn-bg-pressed);
+}
+
+/* Selected toggle/radio option with no color: unselected stays neutral, selected fills in. */
+input:checked + label.fi-btn:not(.fi-outlined):not(.fi-color) {
+    background: var(--khwr-qt-btn-bg-primary);
+    border-color: var(--khwr-qt-btn-border-primary);
+    color: var(--text-inverse);
+}
+
+/* Outlined buttons */
+.fi-btn.fi-outlined:not(.fi-color) {
+    background: transparent;
+    border: 1px solid var(--khwr-qt-btn-border);
+    color: var(--text-primary);
+    box-shadow: none;
+}
+
+.fi-btn.fi-outlined:not(.fi-color):not(.fi-disabled):not([disabled]):hover {
+    background: var(--khwr-qt-btn-bg-hover);
+}
+
+/* Excludes `label`: those are ToggleButtons/radio options, only colored once `:checked` (see below). */
+.fi-btn.fi-color:not(.fi-outlined):not(label) {
+    background: var(--khwr-qt-btn-bg-primary) !important;
+    border: 1px solid var(--khwr-qt-btn-border-primary) !important;
+    color: var(--text-inverse) !important;
+    box-shadow: none !important;
+}
+
+.fi-btn.fi-color:not(.fi-outlined):not(label):not(.fi-disabled):not([disabled]):hover {
+    background: var(--khwr-qt-btn-bg-primary-hover) !important;
+}
+
+.fi-btn.fi-color.fi-outlined {
+    background: transparent !important;
+    border: 1px solid var(--khwr-qt-btn-border-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+/* Wins over the generic .fi-color rule above on source order at equal specificity. */
+.fi-btn.fi-color-danger:not(.fi-outlined):not(label) {
+    background: var(--color-error) !important;
+    border-color: var(--color-error) !important;
+}
+
+.fi-btn.fi-color-success:not(.fi-outlined):not(label) {
+    background: var(--color-success) !important;
+    border-color: var(--color-success) !important;
+}
+
+.fi-btn.fi-color-warning:not(.fi-outlined):not(label) {
+    background: var(--color-warning) !important;
+    border-color: var(--color-warning) !important;
+}
+
+.fi-btn.fi-color-danger:not(.fi-outlined):not(label):not(.fi-disabled):not([disabled]):hover,
+.fi-btn.fi-color-success:not(.fi-outlined):not(label):not(.fi-disabled):not([disabled]):hover,
+.fi-btn.fi-color-warning:not(.fi-outlined):not(label):not(.fi-disabled):not([disabled]):hover {
+    filter: brightness(1.15);
+}
+
+/* ToggleButtons: unselected options stay neutral regardless of assigned color. */
+label.fi-btn.fi-color:not(.fi-outlined) {
+    background: var(--khwr-qt-btn-bg) !important;
+    border: 1px solid var(--khwr-qt-btn-border) !important;
+    color: var(--text-primary) !important;
+    box-shadow: none !important;
+}
+
+label.fi-btn.fi-color:not(.fi-outlined):hover {
+    background: var(--khwr-qt-btn-bg-hover) !important;
+}
+
+input:checked + label.fi-btn.fi-color:not(.fi-outlined) {
+    background: var(--khwr-qt-btn-bg-primary) !important;
+    border-color: var(--khwr-qt-btn-border-primary) !important;
+    color: var(--text-inverse) !important;
+}
+
+input:checked + label.fi-btn.fi-color:not(.fi-outlined):hover {
+    background: var(--khwr-qt-btn-bg-primary-hover) !important;
+}
+
+input:checked + label.fi-btn.fi-color-danger:not(.fi-outlined) {
+    background: var(--color-error) !important;
+    border-color: var(--color-error) !important;
+}
+
+input:checked + label.fi-btn.fi-color-success:not(.fi-outlined) {
+    background: var(--color-success) !important;
+    border-color: var(--color-success) !important;
+}
+
+input:checked + label.fi-btn.fi-color-warning:not(.fi-outlined) {
+    background: var(--color-warning) !important;
+    border-color: var(--color-warning) !important;
+}
+
+.fi-btn.fi-color-danger.fi-outlined {
+    border-color: var(--color-error) !important;
+    color: var(--color-error) !important;
+}
+
+.fi-btn.fi-color-success.fi-outlined {
+    border-color: var(--color-success) !important;
+    color: var(--color-success) !important;
+}
+
+.fi-btn.fi-color-warning.fi-outlined {
+    border-color: var(--color-warning) !important;
+    color: var(--color-warning) !important;
+}
+
+/* Disabled state */
+.fi-btn.fi-disabled:not(.fi-force-enabled),
+.fi-btn[disabled]:not(.fi-force-enabled) {
+    color: var(--text-disabled) !important;
+    opacity: 1;
+}
+
+.fi-btn > .fi-icon {
+    color: currentColor;
+}

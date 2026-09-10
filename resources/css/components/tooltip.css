@@ -1,0 +1,14 @@
+.tippy-box[data-theme~='light'] {
+    --tippy-background-color: #ffffd0;
+    border: 1px solid #c8c870;
+    border-radius: var(--khwr-qt-radius);
+    box-shadow: var(--shadow-sm);
+    color: #2a2a00;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+}
+
+.tippy-box[data-theme~='light'] .tippy-content {
+    padding-inline: var(--khwr-qt-sp3);
+    padding-block: var(--khwr-qt-sp1);
+}

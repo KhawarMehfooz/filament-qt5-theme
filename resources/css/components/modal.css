@@ -1,0 +1,95 @@
+.fi-modal > .fi-modal-close-overlay {
+    background-color: rgba(28, 31, 35, 0.4);
+}
+
+.fi-modal-window {
+    background: var(--khwr-qt-widget-bg);
+    border: 1px solid var(--khwr-qt-toolbar-border);
+    border-radius: var(--khwr-qt-radius);
+    box-shadow: var(--shadow-overlay);
+    overflow: hidden;
+}
+
+.fi-modal-window > .fi-modal-header {
+    position: relative;
+    background: var(--khwr-qt-toolbar-bg);
+    padding-block: var(--khwr-qt-sp4);
+    padding-inline: var(--khwr-qt-sp12);
+}
+
+.fi-modal-window-has-icon > .fi-modal-header,
+.fi-modal-header:has(.fi-modal-description) {
+    padding-block: var(--khwr-qt-sp6);
+    padding-inline: var(--khwr-qt-sp6);
+}
+
+.fi-modal-window-has-content > .fi-modal-header {
+    border-bottom: 1px solid var(--khwr-qt-toolbar-border);
+}
+
+.fi-modal-heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+}
+
+.fi-modal-description {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.fi-modal-content {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    line-height: var(--leading-relaxed);
+}
+
+.fi-modal-window > .fi-modal-footer {
+    background: var(--khwr-qt-window-bg);
+    padding-block: var(--khwr-qt-sp4);
+}
+
+.fi-modal-content + .fi-modal-footer {
+    border-top: 1px solid var(--khwr-qt-grid-line);
+}
+
+.fi-modal-window:not(.fi-modal-window-has-content) > .fi-modal-footer {
+    margin-top: 0;
+}
+
+.fi-modal-window .fi-modal-close-btn {
+    position: absolute;
+    top: var(--khwr-qt-sp4);
+    inset-inline-end: var(--khwr-qt-sp12);
+    width: 20px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--khwr-qt-btn-bg);
+    border: 1px solid var(--khwr-qt-btn-border);
+    border-radius: 2px;
+    color: var(--text-primary);
+}
+
+.fi-modal-window-has-icon > .fi-modal-header > .fi-modal-close-btn,
+.fi-modal-header:has(.fi-modal-description) > .fi-modal-close-btn {
+    top: var(--khwr-qt-sp6);
+    inset-inline-end: var(--khwr-qt-sp6);
+}
+
+.fi-modal-window .fi-modal-close-btn:hover {
+    background: linear-gradient(to bottom, #e05050 0%, #c04040 100%);
+    color: #fff;
+    border-color: #a03030;
+}
+
+.fi-modal-window .fi-modal-close-btn > .fi-icon {
+    width: 10px;
+    height: 10px;
+}

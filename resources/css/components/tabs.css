@@ -1,0 +1,100 @@
+.fi-tabs.fi-contained {
+    background-color: var(--khwr-qt-window-bg);
+    border-bottom: 1px solid var(--khwr-qt-tab-border);
+    padding-block: 0;
+    padding-inline: var(--khwr-qt-sp3);
+    gap: 2px;
+}
+
+.fi-tabs:not(.fi-contained) {
+    background: var(--khwr-qt-widget-bg);
+    box-shadow: none;
+    border: 1px solid var(--khwr-qt-toolbar-border);
+    border-radius: var(--khwr-qt-radius);
+    padding: var(--khwr-qt-sp2);
+    gap: var(--khwr-qt-sp2);
+}
+
+.fi-tabs-item {
+    padding-inline: var(--khwr-qt-sp6);
+    padding-block: var(--khwr-qt-sp2);
+    background: none;
+    border: 1px solid transparent;
+    border-radius: var(--khwr-qt-radius);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.fi-tabs-item:hover {
+    background: var(--khwr-qt-tab-bg);
+}
+
+.fi-tabs-item.fi-active {
+    background: var(--khwr-qt-input-bg);
+    border-color: var(--khwr-qt-tab-border);
+    color: var(--text-primary);
+    font-weight: var(--font-medium);
+}
+
+.fi-tabs-item.fi-active:hover {
+    background: var(--khwr-qt-input-bg);
+}
+
+.fi-tabs-item .fi-tabs-item-label {
+    color: inherit;
+}
+
+.fi-tabs-item.fi-active .fi-tabs-item-label,
+.fi-tabs-item.fi-active > .fi-icon {
+    color: var(--text-primary);
+}
+
+.fi-resource-list-records-page .fi-tabs.fi-tabs {
+    background: none;
+    border: none;
+    padding: 0;
+    gap: 2px;
+}
+
+.fi-resource-list-records-page .fi-tabs-item {
+    background: var(--khwr-qt-tab-bg);
+    border-color: var(--khwr-qt-tab-border);
+    border-radius: var(--khwr-qt-radius) var(--khwr-qt-radius) 0 0;
+    margin-bottom: -1px;
+}
+
+.fi-resource-list-records-page .fi-tabs-item:hover {
+    background: var(--khwr-qt-tab-bg);
+    filter: brightness(1.03);
+}
+
+.fi-resource-list-records-page .fi-tabs-item.fi-active {
+    background: var(--khwr-qt-tab-bg-active);
+    border-bottom-color: var(--khwr-qt-tab-bg-active);
+}
+
+.fi-resource-list-records-page .fi-tabs-item.fi-active:hover {
+    background: var(--khwr-qt-tab-bg-active);
+}
+
+.fi-resource-list-records-page .fi-grid-col:has(.fi-sc-tabs) {
+    margin-bottom: -24px;
+}
+
+.fi-sc-tabs:not(.fi-contained) .fi-sc-tabs-tab.fi-active {
+    margin-top: 0;
+    padding: var(--khwr-qt-sp8);
+    background-color: var(--khwr-qt-window-bg);
+    border-radius: var(--khwr-qt-radius);
+}
+
+.fi-page-has-sub-navigation-top .fi-page-main {
+    gap: var(--khwr-qt-sp8);
+}
+
+.fi-page-has-sub-navigation-top .fi-page-content {
+    background-color: var(--khwr-qt-window-bg);
+    padding: var(--khwr-qt-sp8);
+    border-radius: var(--khwr-qt-radius);
+}

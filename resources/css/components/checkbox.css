@@ -1,0 +1,71 @@
+/* Fixed size on purpose: a glyph control has no content for padding to size around. */
+
+input[type='checkbox'].fi-checkbox-input,
+input[type='radio'].fi-radio-input {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: var(--khwr-qt-input-bg);
+    border: 1px solid var(--khwr-qt-input-border);
+    border-radius: var(--radius-sm);
+    box-shadow: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 10px;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+input[type='radio'].fi-radio-input {
+    border-radius: 50%;
+}
+
+input[type='checkbox'].fi-checkbox-input:checked,
+input[type='checkbox'].fi-checkbox-input:indeterminate,
+input[type='radio'].fi-radio-input:checked {
+    background-color: var(--steel-500);
+    border-color: var(--steel-600);
+}
+
+input[type='checkbox'].fi-checkbox-input:checked {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E");
+}
+
+input[type='checkbox'].fi-checkbox-input:indeterminate {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 6.75a1.25 1.25 0 0 0 0 2.5h7a1.25 1.25 0 0 0 0-2.5h-7z'/%3E%3C/svg%3E");
+}
+
+input[type='radio'].fi-radio-input:checked {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3.5'/%3E%3C/svg%3E");
+}
+
+input[type='checkbox'].fi-checkbox-input:hover:not(:disabled),
+input[type='radio'].fi-radio-input:hover:not(:disabled) {
+    border-color: var(--khwr-qt-input-border-focus);
+}
+
+input[type='checkbox'].fi-checkbox-input:focus,
+input[type='radio'].fi-radio-input:focus,
+input[type='checkbox'].fi-checkbox-input:focus-visible,
+input[type='radio'].fi-radio-input:focus-visible {
+    box-shadow: 0 0 0 2px rgba(61, 90, 128, 0.25);
+    outline: none;
+    border-color: var(--khwr-qt-input-border-focus);
+}
+
+input[type='checkbox'].fi-checkbox-input:disabled,
+input[type='radio'].fi-radio-input:disabled {
+    background-color: var(--khwr-qt-window-bg);
+    border-color: var(--border-subtle);
+    opacity: 1;
+}
+
+input[type='checkbox'].fi-checkbox-input:disabled:checked,
+input[type='radio'].fi-radio-input:disabled:checked {
+    background-color: var(--text-disabled);
+    border-color: var(--text-disabled);
+}
+
+input[type='checkbox'].fi-checkbox-input.fi-invalid,
+input[type='radio'].fi-radio-input.fi-invalid {
+    border-color: var(--color-error);
+}

@@ -1,0 +1,108 @@
+/* Dark mode: scoped under :root.dark to match the panel's dark class. */
+
+:root.dark {
+  --khwr-qt-window-bg:       #1A212B;
+  --khwr-qt-widget-bg:       #232B38;
+  --khwr-qt-surface-bg:      #12161D;
+  --khwr-qt-titlebar-bg:     #2C3542;
+  --khwr-qt-titlebar-active: #4F7098;
+  --khwr-qt-menubar-bg:      #1E2530;
+  --khwr-qt-toolbar-bg:      linear-gradient(to bottom, #2C3542 0%, #212836 100%);
+  --khwr-qt-toolbar-border:  #3C4756;
+  --khwr-qt-statusbar-bg:    #1E2530;
+  --khwr-qt-dock-bg:         #1E2530;
+  --khwr-qt-dock-header-bg:  #323C4A;
+  --khwr-qt-groupbox-border: #3C4756;
+  --khwr-qt-separator-color: #333D4B;
+
+  --khwr-qt-btn-bg:          linear-gradient(to bottom, #323C4A 0%, #262E3B 100%);
+  --khwr-qt-btn-bg-hover:    linear-gradient(to bottom, #3B4656 0%, #2E3745 100%);
+  --khwr-qt-btn-bg-pressed:  linear-gradient(to bottom, #1E2530 0%, #262E3B 100%);
+  --khwr-qt-btn-bg-primary:  linear-gradient(to bottom, #5E7EA3 0%, #4C6C91 100%);
+  --khwr-qt-btn-bg-primary-hover: linear-gradient(to bottom, #6C8DB1 0%, #597AA0 100%);
+  --khwr-qt-btn-border:      #3C4756;
+  --khwr-qt-btn-border-primary: #7691AC;
+
+  --khwr-qt-input-bg:        #161C25;
+  --khwr-qt-input-border:    #3C4756;
+  --khwr-qt-input-border-focus: #7691AC;
+
+  --khwr-qt-tab-bg:          #232B38;
+  --khwr-qt-tab-bg-active:   #2C3542;
+  --khwr-qt-tab-border:      #3C4756;
+
+  --khwr-qt-row-alt:         #29323F;
+  --khwr-qt-row-selected:    #3C5876;
+  --khwr-qt-row-selected-text: #E4EAF0;
+  --khwr-qt-grid-line:       #333D4B;
+  --khwr-qt-header-bg:       linear-gradient(to bottom, #212836 0%, #1A212B 100%);
+
+  --status-new-bg:         #2C3542;
+  --status-new-text:       #AEB5C0;
+  --status-scheduled-bg:   #23384A;
+  --status-scheduled-text: #86A6C4;
+  --status-progress-bg:    #1B3B44;
+  --status-progress-text:  #78B4C4;
+  --status-completed-bg:   #1C3A2A;
+  --status-completed-text: #7CBE95;
+  --status-invoiced-bg:    #1A3840;
+  --status-invoiced-text:  #79AFBA;
+  --status-voided-bg:      #402B2B;
+  --status-voided-text:    #C68F8F;
+
+  --color-primary:        #5E7EA3;
+  --color-primary-hover:  #6C8DB1;
+  --color-primary-active: #7691AC;
+  --color-success:        #7CBE95;
+  --color-error:          #C68F8F;
+  --color-warning:        #C9A579;
+
+  --text-primary:   #C7CDD5;
+  --text-secondary: #8B93A0;
+  --text-muted:     #626A77;
+  --text-inverse:   #161C25;
+  --text-link:      #82A0BC;
+  --text-disabled:  #4A5361;
+
+  --border-color:  #3C4756;
+  --border-subtle: #2E3745;
+  --border-strong: #4E5967;
+
+  --shadow-sm:      0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-md:      0 2px 4px rgba(0, 0, 0, 0.35);
+  --shadow-overlay: 0 4px 16px rgba(0, 0, 0, 0.45);
+
+  --steel-50:  #29323F;
+  --steel-500: #5E7EA3;
+  --steel-600: #7691AC;
+  --slate-300: #3C4756;
+}
+
+:root.dark .fi-ta-ctn {
+  background: var(--khwr-qt-widget-bg);
+}
+
+:root.dark .fi-wi-stats-overview-stat {
+  background: var(--khwr-qt-widget-bg);
+}
+
+:root.dark .fi-modal > .fi-modal-close-overlay {
+  background-color: rgba(8, 10, 14, 0.55);
+}
+
+:root.dark .tippy-box[data-theme~='light'] {
+  --tippy-background-color: #3A331F;
+  border-color: #564D2E;
+  color: #D9C989;
+}
+
+:root.dark .fi-input-wrp:not(.fi-disabled):not(:has(.fi-ac-action:focus)):focus-within {
+  box-shadow: 0 0 0 2px rgba(94, 126, 163, 0.3);
+}
+
+:root.dark input[type='checkbox'].fi-checkbox-input:focus,
+:root.dark input[type='radio'].fi-radio-input:focus,
+:root.dark input[type='checkbox'].fi-checkbox-input:focus-visible,
+:root.dark input[type='radio'].fi-radio-input:focus-visible {
+  box-shadow: 0 0 0 2px rgba(94, 126, 163, 0.4);
+}

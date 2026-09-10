@@ -1,0 +1,20 @@
+select.fi-select-input,
+.fi-select-input .fi-select-input-btn {
+    padding-block: var(--khwr-qt-sp1);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238D949D' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 7px center;
+    background-size: 11px 7px;
+}
+
+.fi-select-input div[x-ref='select'],
+.fi-select-input .fi-select-input-btn {
+    min-height: 0;
+}
+
+.fi-select-input .fi-select-input-placeholder {
+    color: var(--text-muted);
+}

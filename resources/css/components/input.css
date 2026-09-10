@@ -1,0 +1,39 @@
+.fi-input-wrp {
+    background-color: var(--khwr-qt-input-bg);
+    border: 1px solid var(--khwr-qt-input-border);
+    border-radius: var(--khwr-qt-radius);
+    box-shadow: none;
+    min-height: 0;
+}
+
+.fi-input-wrp:not(.fi-disabled):not(:has(.fi-ac-action:focus)):focus-within {
+    border-color: var(--khwr-qt-input-border-focus);
+    box-shadow: 0 0 0 2px rgba(61, 90, 128, 0.15);
+}
+
+.fi-input-wrp.fi-disabled {
+    background-color: var(--khwr-qt-window-bg);
+}
+
+.fi-input-wrp .fi-input-wrp-prefix,
+.fi-input-wrp .fi-input-wrp-suffix {
+    border-color: var(--border-subtle);
+}
+
+input.fi-input,
+textarea.fi-input {
+    padding-block: var(--khwr-qt-sp1);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+}
+
+input.fi-input::placeholder,
+textarea.fi-input::placeholder {
+    color: var(--text-muted);
+}
+
+input.fi-input:disabled,
+textarea.fi-input:disabled {
+    color: var(--text-disabled);
+}

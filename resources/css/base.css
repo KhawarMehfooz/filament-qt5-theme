@@ -1,0 +1,7 @@
+.fi-body {
+    background-color: var(--khwr-qt-window-bg);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+}

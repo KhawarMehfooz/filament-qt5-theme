@@ -1,0 +1,28 @@
+/* Only the empty drop zone is themed; per-file previews and the filepond editor modal are left stock. */
+
+.fi-fo-file-upload .filepond--root {
+    background: var(--khwr-qt-input-bg);
+    border: 1px dashed var(--khwr-qt-input-border);
+    border-radius: var(--khwr-qt-radius);
+    box-shadow: none;
+}
+
+.fi-fo-file-upload .filepond--root[data-disabled='disabled'] {
+    background: var(--khwr-qt-window-bg);
+}
+
+.fi-fo-file-upload .filepond--drop-label,
+.fi-fo-file-upload .filepond--drop-label label {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.fi-fo-file-upload .filepond--label-action {
+    color: var(--color-primary);
+}
+
+.fi-fo-file-upload-error-message {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+}

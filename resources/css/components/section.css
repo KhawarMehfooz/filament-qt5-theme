@@ -1,0 +1,80 @@
+.fi-section:not(.fi-aside):not(.fi-section-not-contained) {
+    background: var(--khwr-qt-widget-bg);
+    border: 1px solid var(--khwr-qt-toolbar-border);
+    border-radius: var(--khwr-qt-radius);
+    box-shadow: none;
+}
+
+.fi-section:not(.fi-aside):not(.fi-section-not-contained).fi-secondary {
+    background: var(--khwr-qt-widget-bg);
+}
+
+.fi-section:not(.fi-aside):not(.fi-section-not-contained) > .fi-section-header {
+    align-items: center;
+    gap: var(--khwr-qt-sp3);
+    background: var(--khwr-qt-header-bg);
+    border-bottom: 1px solid var(--khwr-qt-toolbar-border);
+    border-top-left-radius: var(--khwr-qt-radius);
+    border-top-right-radius: var(--khwr-qt-radius);
+    padding-inline: var(--khwr-qt-sp6);
+    padding-block: var(--khwr-qt-sp2);
+}
+
+.fi-section:not(.fi-aside):not(.fi-section-not-contained).fi-collapsed > .fi-section-header {
+    border-bottom-left-radius: var(--khwr-qt-radius);
+    border-bottom-right-radius: var(--khwr-qt-radius);
+}
+
+.fi-section:not(.fi-aside):not(.fi-section-not-contained).fi-collapsed > .fi-section-header {
+    border-bottom: none;
+}
+
+.fi-section:not(.fi-aside):not(.fi-section-not-contained) > .fi-section-header > .fi-icon {
+    color: var(--steel-500);
+    width: 16px;
+    height: 16px;
+    margin-top: 0;
+}
+
+.fi-section:not(.fi-aside):not(.fi-section-not-contained) > .fi-section-header .fi-section-collapse-btn > .fi-icon {
+    width: 12px;
+    height: 12px;
+    margin-top: 0;
+}
+
+.fi-section:not(.fi-aside):not(.fi-section-not-contained) > .fi-section-header .fi-section-collapse-btn {
+    padding: var(--khwr-qt-sp1);
+    margin: calc(var(--khwr-qt-sp1) * -1);
+}
+
+.fi-section:not(.fi-aside):not(.fi-section-not-contained) > .fi-section-header .fi-section-header-text-ctn {
+    display: flex;
+    align-items: baseline;
+    gap: var(--khwr-qt-sp4);
+}
+
+.fi-section:not(.fi-aside):not(.fi-section-not-contained) > .fi-section-content-ctn > .fi-section-content {
+    padding-inline: var(--khwr-qt-sp8);
+    padding-block: var(--khwr-qt-sp6);
+}
+
+.fi-section-header-heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+}
+
+.fi-section-header-description {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    margin-inline-start: auto;
+}
+
+.fi-section.fi-aside > .fi-section-content-ctn {
+    background: var(--khwr-qt-widget-bg);
+    border: 1px solid var(--khwr-qt-toolbar-border);
+    border-radius: var(--khwr-qt-radius);
+    box-shadow: none;
+}
