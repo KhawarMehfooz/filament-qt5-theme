@@ -1,0 +1,157 @@
+/*
+ * Literal fixdesk port: `.progress-steps` / `.progress-step` /
+ * `.progress-step-connector` in components.css (job-status indicator,
+ * seen in components.html under "Progress") — plain icon-over-label
+ * nodes joined by a thin line that fills in steel color as steps
+ * complete, no boxes/tabs/circles. Ported onto Filament's actual
+ * `.fi-sc-wizard-header` DOM: the header's grid is switched to flex so
+ * each step can flex like `.progress-step`, the button is reflowed from
+ * row (icon beside label) to column (icon above label) to match the
+ * mock, and Filament's own separator — a stretched chevron `<svg>` — has
+ * its `<path>` hidden and the `<svg>` box itself repurposed as the
+ * connector line, since fixdesk uses a plain bar, not a chevron.
+ */
+
+.fi-sc-wizard.fi-contained {
+    background: var(--khwr-qt-widget-bg);
+    border: 1px solid var(--khwr-qt-toolbar-border);
+    border-radius: var(--khwr-qt-radius);
+    box-shadow: none;
+}
+
+.fi-sc-wizard-header {
+    display: flex;
+    align-items: flex-start;
+    padding-inline: var(--khwr-qt-sp8);
+    padding-block: var(--khwr-qt-sp6);
+}
+
+.fi-sc-wizard.fi-contained .fi-sc-wizard-header {
+    border-bottom: 1px solid var(--khwr-qt-toolbar-border);
+}
+
+.fi-sc-wizard:not(.fi-contained) .fi-sc-wizard-header {
+    border: 1px solid var(--khwr-qt-toolbar-border);
+    border-radius: var(--khwr-qt-radius);
+}
+
+.fi-sc-wizard-header-step {
+    flex: 1;
+    align-items: flex-start;
+}
+
+.fi-sc-wizard-header-step-btn {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--khwr-qt-sp2);
+    padding: 0;
+    min-width: 60px;
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+}
+
+.fi-sc-wizard-header-step-icon-ctn {
+    width: auto;
+    height: auto;
+    border: none !important;
+    background: none !important;
+    border-radius: 0;
+}
+
+.fi-sc-wizard-header-step-icon-ctn .fi-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--border-strong);
+    transition: color var(--transition-base);
+}
+
+.fi-sc-wizard-header-step-number {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--border-strong);
+    transition: color var(--transition-base);
+}
+
+.fi-sc-wizard-header-step-text {
+    display: grid;
+    justify-items: center;
+}
+
+.fi-sc-wizard-header-step-label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    white-space: nowrap;
+    text-align: center;
+    transition: color var(--transition-base);
+}
+
+.fi-sc-wizard-header-step-description {
+    display: none;
+}
+
+/* Filament's separator is a stretched chevron <svg>; hide the chevron path and
+   repurpose the <svg> box itself as a plain connector bar, like fixdesk's. */
+.fi-sc-wizard-header-step-separator {
+    position: static;
+    flex: 1 1 auto;
+    width: auto;
+    height: 1px;
+    align-self: center;
+    margin-top: 9px;
+    margin-inline: var(--khwr-qt-sp2);
+    background-color: var(--border-color);
+    overflow: visible;
+    transition: background-color var(--transition-base);
+}
+
+.fi-sc-wizard-header-step-separator path {
+    display: none;
+}
+
+.fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-icon-ctn .fi-icon,
+.fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-number {
+    color: var(--steel-500);
+}
+
+.fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-label {
+    color: var(--steel-500);
+    font-weight: var(--font-medium);
+}
+
+.fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-icon-ctn .fi-icon,
+.fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-number {
+    color: var(--steel-400);
+}
+
+.fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-label {
+    color: var(--text-secondary);
+}
+
+.fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-separator {
+    background-color: var(--steel-400);
+}
+
+.fi-sc-wizard-step {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+}
+
+.fi-sc-wizard.fi-contained .fi-sc-wizard-step.fi-active {
+    padding: var(--khwr-qt-sp8);
+}
+
+.fi-sc-wizard-footer {
+    background: var(--khwr-qt-window-bg);
+    padding-block: var(--khwr-qt-sp4);
+}
+
+.fi-sc-wizard.fi-contained .fi-sc-wizard-footer {
+    border-top: 1px solid var(--khwr-qt-grid-line);
+    padding-inline: var(--khwr-qt-sp8);
+    border-bottom-left-radius: var(--khwr-qt-radius);
+    border-bottom-right-radius: var(--khwr-qt-radius);
+}
