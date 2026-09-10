@@ -4,7 +4,16 @@
     border-radius: var(--khwr-qt-radius);
     box-shadow: none;
     min-height: 0;
-    overflow: hidden;
+}
+
+.fi-input-wrp > :first-child {
+    border-start-start-radius: calc(var(--khwr-qt-radius) - 1px);
+    border-end-start-radius: calc(var(--khwr-qt-radius) - 1px);
+}
+
+.fi-input-wrp > :last-child {
+    border-start-end-radius: calc(var(--khwr-qt-radius) - 1px);
+    border-end-end-radius: calc(var(--khwr-qt-radius) - 1px);
 }
 
 .fi-input-wrp:not(.fi-disabled):not(:has(.fi-ac-action:focus)):focus-within {
